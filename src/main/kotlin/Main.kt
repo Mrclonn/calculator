@@ -12,16 +12,17 @@ fun main(args: Array<String>) {
     } else if ("exp" in arg) {
         splitArguments(arg, "exp").let { Exponentiation(it.first, it.second) }
     } else if ("sqr" in arg) {
-        splitArguments(arg, "sqr").let { Square(it.first, it.second)}
+        splitArguments(arg, "sqr").let { Square(it.first, it.second) }
     } else {
         null
     }
     if (operation == null) {
         println("Unknown")
     } else {
-        println(operation.calculate())
+        if (operation.calculate() % 1 == 0.0) println(operation.calculate().toLong())
+        else println(operation.calculate())
+
     }
-    println()
 }
 // ((90 + (125 / 454)))
 
