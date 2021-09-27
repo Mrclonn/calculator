@@ -8,4 +8,7 @@ open class Exponentiation(
         val right2 = right ?: left
         return left!!.toDouble().pow(right2!!.toDouble())
     }
+    companion object {
+        val delim = "exp"
+    }
 }
